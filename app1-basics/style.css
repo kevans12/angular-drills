@@ -1,0 +1,72 @@
+* {
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.firstDiv {
+  border: 1px solid #e4e4e4;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.secondDiv {
+  border: 1px solid #e4e4e4;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.family {
+  color: #0c1e3a;
+
+}
+
+.thirdDiv {
+  border: 1px solid #e4e4e4;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.characters{
+  display: flex;
+  flex-direction: row;
+}
+
+.character {
+  width: 200px;
+  color: #042c6d;
+  margin: 2px;
+  padding: 2px;
+}
+
+.chuck {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.fourthDiv {
+  border: 1px solid #e4e4e4;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}

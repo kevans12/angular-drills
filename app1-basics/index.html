@@ -1,6 +1,57 @@
-<html>
-	<body>
-	
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular</title>
+	<link rel="stylesheet" type="text/css" href="style.css"
+</head>
+	<body ng-controller="mainCtrl">
+	 <h1>Angular Practice</h1>
+	 <div class="firstDiv">
+		 <h3>Basic Text Box</h3>
+		  <p>
+			Type Text Here:
+			<input ng-model="text" placeholder="Type Here" />
+		  </p>
+	  	<p>
+       See it here: {{text}}
+		  </p>
+	  </div>
+	  <div class="secondDiv">
+		 <h3>Some Filtering</h3>
+		 <label><input ng-model="search" placeholder="Search"  /></label>
+		 <p ng-repeat="person in simpleArray | filter:search" class="family">
+      {{person}}
+		 </p>
+	 </div>
+	 <div class="thirdDiv">
+		<h3>Hit that API</h3>
+		<h5>Star Wars Characters</h5>
+		<p>
+			<button ng-click="getCharacters()">get characters</button>
+			Filter: <input ng-model="charFilter" placeholder="Search"  />
+		</p>
+
+		<div ng-repeat="character in starWarsCharacters | filter:charFilter" class="characters">
+      <span class="character">
+				<b>Name:</b> {{character.Name}}
+			</span>
+			<span class="character">
+				<b>Height:</b> {{character.Height}}
+			</span>
+		</div>
+	 </div>
+	 <div class="fourthDiv">
+		<h3>Chuck Norris</h3>
+		<img class="chuck" src="http://www.freeinfosociety.com/media/images/1602.jpg" />
+		<div>
+			<button ng-click="getChuck()">Get Fact</button>
+			<p>
+				{{chuckNorrisFact}}
+			</p>
+		</div>
+	 </div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
